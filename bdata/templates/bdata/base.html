@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ff9b35">
+    <title>
+    {% block title %}
+    {% endblock title %}
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href= {% static '/css/styles.min.css' %} >
+    <link rel="stylesheet" href= {% static '/css/anim.css' %} >
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+
+</head>
+
+<body style="font-family: Montserrat, sans-serif;">
+  <div>
+        <div class="header-blue">
+          <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search" style="font-family: Montserrat, sans-serif;">
+              <div class="container"><a class="navbar-brand" href={% url 'home' %}>BUSe</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                  <div class="collapse navbar-collapse text-center d-xl-flex justify-content-xl-center"
+                      id="navcol-1">
+                      <ul class="nav navbar-nav">
+                          <li class="nav-item" role="presentation"><a class="nav-link active" href={% url 'find' %}>Find Your Bus</a></li>
+                          <li class="dropdown nav-item"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">More</a>
+                              <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="our_team">Our Team</a><a class="dropdown-item" role="presentation" href="#">About Us</a><a class="dropdown-item" role="presentation" href="#">Contact</a></div>
+                          </li>
+                      </ul>
+                      <form class="form-inline mr-auto" target="_self">
+                          <div class="form-group d-xl-flex"><label for="search-field"><i class="fa fa-search"></i></label><input class="form-control search-field" type="search" id="search-field" name="search"></div>
+                      </form><span class="text-uppercase navbar-text"> <a class="login" href="#">Log In</a></span><a class="btn btn-light text-uppercase action-button" role="button" href="#">Sign Up</a></div>
+              </div>
+          </nav>
+
+          <main id="swup" style="padding: 10px">
+          {% block header-orange %}
+          {% endblock header-orange %}
+          </main>
+        </div>
+        {% block sections %}
+        {% endblock sections %}
+        <div class="footer-clean">
+            <footer>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        
+                        <div class="col-lg-3 item social">
+                            <a href="https://www.facebook.com/">
+                                <i class="icon ion-social-facebook"></i>
+                            </a>
+                            <a href="https://www.twitter.com/">
+                                <i class="icon ion-social-twitter"></i>
+                            </a>
+                            <a href="https://www.snapchat.com/">
+                                <i class="icon ion-social-snapchat"></i>
+                            </a>
+                            <a href="https://www.instagram.com/">
+                                <i class="icon ion-social-instagram"></i>
+                            </a>
+                            <p class="copyright">Team BUSe © 2019</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        
+
+        <script>
+            
+            /* const swup = new Swup({
+                plugins: [new SwupOverlayTheme({
+                    color: "#ff9b35"
+                })]
+            }); */
+
+        </script>
+        {% block scripts %}
+        
+        {% endblock scripts %}
+    </body>
+    
+    </html>
