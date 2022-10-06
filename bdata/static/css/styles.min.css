@@ -144,7 +144,7 @@ body.side-menu-visible #side-menu {
 }
 
 .header-blue {
-    background: linear-gradient(155deg, #f34867, #738);
+    background: linear-gradient(155deg, #76c4e2, rgba(9, 24, 233, 0.877),#a530af);
     background-color: #f39c12;
     padding-bottom: 80px;
     font-family: 'Source Sans Pro', sans-serif

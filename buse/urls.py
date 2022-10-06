@@ -26,4 +26,5 @@ urlpatterns = [
     path('bus/<int:bus_id>/<int:bpoint>', views.bus, name="bus_details"),
     path('updateloc', views.loc, name="updateloc"),
     path('our_team',views.ot,name='our_team'),
+    path('login',views.login,name='login/')
 ]

@@ -7,12 +7,12 @@ Find Your Bus - BUSe
 {% block header-orange %}
 <div class="row text-white justify-content-center" style="font-family: Montserrat, sans-serif;padding-top: 80px;padding-bottom: 80px;padding-right: 10px;padding-left: 10px;">
     <div class="col-12 col-sm-8 col-lg-6 col-xl-4 align-self-center">
-        <div class="container border rounded border-white">
+        <div class="container border rounded border-white" style="border-radius: 2.25rem!important;">
             <form name="find-form" action={% url 'search' %} method="post" style="padding: 20px;margin: 30px;" >
                     {% csrf_token %}
                     <div class="form-group">
                         <label>Route</label>
-                        <select name="route" class="form-control" required="">
+                        <select name="route" class="form-control" required="" style="background-color: whitesmoke;">
                             <option value="" hidden="">Select your route</option>
                             {% for route in routes %}
                             <option value={{ route.id }}>{{ route }}</option>

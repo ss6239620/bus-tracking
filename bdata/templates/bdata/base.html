@@ -27,7 +27,7 @@
   <div>
         <div class="header-blue">
           <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search" style="font-family: Montserrat, sans-serif;">
-              <div class="container"><a class="navbar-brand" href={% url 'home' %}>BUSe</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+              <div class="container"><img src="{% static 'img/bus_.png' %}" width="5%" height="5%"><a class="navbar-brand" href={% url 'home' %}>BUSe</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                   <div class="collapse navbar-collapse text-center d-xl-flex justify-content-xl-center"
                       id="navcol-1">
                       <ul class="nav navbar-nav">
@@ -38,12 +38,14 @@
                       </ul>
                       <form class="form-inline mr-auto" target="_self">
                           <div class="form-group d-xl-flex"><label for="search-field"><i class="fa fa-search"></i></label><input class="form-control search-field" type="search" id="search-field" name="search"></div>
-                      </form><span class="text-uppercase navbar-text"> <a class="login" href="#">Log In</a></span><a class="btn btn-light text-uppercase action-button" role="button" href="#">Sign Up</a></div>
+                      </form><span class="text-uppercase navbar-text"> <a class="login" href="login">Log In</a></span><a class="btn btn-light text-uppercase action-button" role="button" href="#">Sign Up</a></div>
               </div>
           </nav>
 
           <main id="swup" style="padding: 10px">
           {% block header-orange %}
+
+          
           {% endblock header-orange %}
           </main>
         </div>

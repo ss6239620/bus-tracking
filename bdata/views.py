@@ -52,6 +52,9 @@ def home(request):
 #     }
 #     return render(request, 'bdata/bus.html', context=context)
 
+def login(request):
+    return render(request,'bdata/login.html')
+
 def loc(request):
     if request.method == "POST":
         bus_lat = request.POST.get("lat")
@@ -82,3 +85,4 @@ def bus(request, bus_id, bpoint):
     map = map._repr_html_()
     context={'map':map}
     return render(request,'bdata/map.html',context=context)
+
